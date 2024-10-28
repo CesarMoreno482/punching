@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Entradas</title>
+    <link rel="stylesheet" href="static/style.css"> <!-- Asegúrate de tener tu CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Entradas</h1>
+        <form method="POST" id="registroForm">
+            <label for="nombre">Nombre:</label>
+            <input 
+                type="text" 
+                name="nombre" 
+                id="nombre" 
+                title="Ingresa el nombre a registrar" 
+                placeholder="Ejemplo: Juan Pérez" 
+                required
+            >
+            <button type="submit">Registrar Entrada</button>
+        </form>
+        
+        <h2>Registros</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Hora de Entrada</th>
+                    <th>Hora de Salida</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="listaRegistros">
+                {% for registro in registros %}
+                <tr>
+                    <td>{{ registro.id }}</td>
+                    <td>{{ registro.nombre }}</td>
+                    <td>{{ registro.entrada }}</td>
+                    <td>{{ registro.salida }}</td>
+                    <td>
+                        <a href="{{ url_for('salida', id=registro.id) }}">Registrar Salida</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="button-container">
+            <a href="{{ url_for('agregar_nombre') }}" class="button">Agregar Nombres</a>
+        </div>
+    </div>
+</body>
+</html>

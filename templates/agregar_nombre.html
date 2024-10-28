@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Nombres</title>
+    <link rel="stylesheet" href="static/style.css"> <!-- Asegúrate de tener tu CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Registrar Nombres e IDs</h1>
+        <form method="POST" id="agregarForm">
+            <label for="nombre">Nombre:</label>
+            <input 
+                type="text" 
+                name="nombre" 
+                id="nombre" 
+                title="Ingresa el nombre a registrar" 
+                placeholder="Ejemplo: Juan Pérez" 
+                required
+            >
+
+            <label for="id">ID:</label>
+            <input 
+                type="number" 
+                name="id" 
+                id="id" 
+                title="Ingresa el ID asociado" 
+                placeholder="Ejemplo: 123" 
+                required
+            >
+
+            <button type="submit">Agregar Nombre</button>
+        </form>
+        
+        <div class="button-container">
+            <a href="{{ url_for('index') }}" class="button">Volver al Registro</a>
+        </div>
+    </div>
+</body>
+</html>

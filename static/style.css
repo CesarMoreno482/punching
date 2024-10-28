@@ -1,0 +1,94 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Cambiar a una fuente moderna */
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px; /* Bordes más redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+}
+
+h1, h2 {
+    color: #0038A8; /* Azul de la bandera dominicana */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre los elementos del formulario */
+}
+
+input[type="text"], input[type="number"], button {
+    padding: 12px; /* Más padding para los campos */
+    border-radius: 5px; /* Bordes redondeados en inputs */
+    border: 1px solid #ccc;
+    transition: border 0.3s; /* Transición suave para el borde */
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #0038A8; /* Color de borde al enfocar */
+}
+
+button {
+    background-color: #A0040E; /* Rojo de la bandera dominicana */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones para hover */
+}
+
+button:hover {
+    background-color: #D00000; /* Efecto hover */
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Espacio superior para la tabla */
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+a {
+    color: #0038A8; /* Azul de la bandera dominicana */
+    text-decoration: none; /* Sin subrayado en enlaces */
+    font-weight: bold; /* Texto en negrita */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Alinear a la derecha */
+    gap: 10px; /* Espaciado entre botones */
+    margin-bottom: 20px; /* Espacio inferior para la sección de botones */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0038A8; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.button:hover {
+    background-color: #A0040E; /* Color de fondo al pasar el mouse */
+}
